@@ -11,11 +11,11 @@
     <p id="description">Thank you for your participation in our survey! Please answer the questions below so that we can learn more about you.</p>
     <form id="survey-form">
       <label for="name" id="name-label">Name</label>
-      <input type="text" name="name" id="name" placeholder="Enter your name">
+      <input type="text" id="name" placeholder="Enter your name" required>
       <label for "email" id="email-label">Email</label>
-      <input type="text" name="email" id="email" placeholder="Enter your email">
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
       <label for="number" id="number-label">Age</label>
-      <input type="number" name="age" id="number" placeholder="Enter your age">
+      <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age">
       <p>What is your employment status?</p>
       <select id="dropdown" name="employment-status">
         <option value="full">Full Time</option>
