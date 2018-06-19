@@ -4,159 +4,162 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for your participation in our survey! Please answer the questions below so that we can learn more about you.</p>
-    <form id="survey-form">
-      <label for="name" id="name-label">Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for "email" id="email-label">Email</label>
-      <input type="email" name="email" id="email" placeholder="Enter your email" required>
-      <label for="number" id="number-label">Age</label>
-      <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age">
-      <p>What is your employment status?</p>
-      <select id="dropdown" name="employment-status">
-        <option value="full">Full Time</option>
-        <option value="part">Part Time</option>
-        <option value="contract-freelance">Contract or freelance worker</option>
-        <option value="retired">Retired</option>
-        <option value="student">Student</option>
-        <option value="homemaker">Homemaker</option>
-        <option value="not-employed-looking">Not employed but looking for work</option>
-        <option value="not-employed-not-looking">Not employed and not looking for work</option>
-        <option value="prefer-not-to-respond">Prefer not to respond</option>
-      </select>
-      <fieldset id="education-level">
-        <legend>What is your level of education?</legend>
-        <input type="radio" name="education-level" value="some-high-school" id="some-high-school">
-        <label for="some-high-school">Some high school</label><br>
-        <input type="radio" name="education-level" value="high-school-graduate" id="high-school-graduate">
-        <label for="high-school-graduate">High school graduate or equivalent</label><br>
-        <input type="radio" name="education-level" value="trade-vocational-degree" id="trade-vocational-degree">
-        <label for="trade-vocational-degree">Trade or vocational degree</label><br>
-        <input type="radio" name="education-level" value="some-college" id="some-college">
-        <label for="some-college">Some college</label><br>
-        <input type="radio" name="education-level" value="associate-degree" id="associate-degree">
-        <label for="associate-degree">Associate degree</label><br>
-        <input type="radio" name="education-level" value="bachelors-degree" id="bachelors-degree">
-        <label for="bachelors-degree">Bachelor's degree</label><br>
-        <input type="radio" name="education-level" value="graduate-professional-degree" id="graduate-professional-degree">
-        <label for="graduate-professional-degree">Graduate or professional degree</label><br>
-        <input type="radio" name="education-level" value="prefer-not-to-answer" id="prefer-not-to-answer">
-        <label for="prefer-not-to-answer">Prefer not to answer</label>
-      </fieldset>
-      <p>What nationality are you? (Check all that apply)</p>
-      <input type="checkbox" name="nationality" value="asian-pacific-islander" id="asian-pacific-islander">
-      <label for="asian-pacific-islander">Asian/Pacific Islander</label><br>
-      <input type="checkbox" name="nationality" value="black-african-american" id="black-african-american">
-      <label for="black-african-american">Black/African-American</label><br>
-      <input type="checkbox" name="nationality" value="caucasian" id="caucasian">
-      <label for="caucasian">Caucasian</label><br>
-      <input type="checkbox" name="nationality" value="hispanic" id="hispanic">
-      <label for="hispanic">Hispanic</label><br>
-      <input type="checkbox" name="nationality" value="native-american-alaska-native" id="native-american-alaska-native">
-      <label for="native-american-alaska-native">Native American/Alaska Native</label><br>
-      <input type="checkbox" name="nationality" value="other-multiracial" id="other-multiracial">
-      <label for="other-multiracial">Other/Multi-racial</label><br>
-      <input type="checkbox" name="nationality" value="decline-to-respond" id="decline-to-respond">
-      <label for="decline-to-respond">Decline to respond</label>
-      <p>What industry do you work in?</p>
-      <select id="industry" name="industry">
-        <option value="accounting">Accounting</option>
-        <option value="advertising">Advertising</option>
-        <option value="aerospace-aviation-automotive">Aerospace/Aviation/Automotive</option>
-        <option value="agriculture-forestry-fishing">Agriculture/Forestry/Fishing</option>
-        <option value="biotechnology">Biotechnology</option>
-        <option value="business-services">Business services(Hotels, Lodging places)</option>
-        <option value="computers">Computers(Hardware, Software, Internet)</option>
-        <option value="construction">Construction/Home Improvement</option>
-        <option value="consulting">Consulting</option>
-        <option value="education">Education</option>
-        <option value="engineering-architecture">Engineering/Architecture</option>
-        <option value="entertainment-recreation">Entertainment/Recreation</option>
-        <option value="finance-banking-insurance">Finance/Banking/Insurance</option>
-        <option value="food-service">Food service</option>
-        <option value="government-military">Government Military</option>
-        <option value="healthcare-medicine">Healthcare/Medical</option>
-        <option value="internet">Internet/Web 2.0</option>
-        <option value="legal">Legal</option>
-        <option value="manufacturing">Manufacturing</option>
-        <option value="marketing">Marketing/Market research/Public relations</option>
-      </select>
-      <p>Which describes your title in your current position</p>
-      <select id="position" name="position">
-        <option value="ceo-president">CEO/President</option>
-        <option value="vp">VP</option>
-        <option value="cfo">CFO</option>
-        <option value="director">Director</option>
-        <option value="manager">Manager</option>
-        <option value="technical">Technical</option>
-        <option value="small-business-owner">Small Business Owner</option>
-        <option value="clerical-administration">Clerical/Administration</option>
-        <option value="doctor-physician">Doctor/Physician</option>
-        <option value="developer-programmer">Developer/Programmer</option>
-        <option value="lawyer">Lawyer</option>
-        <option value="sales-representative">Sales Representative</option>
-        <option value="customer-service">Customer Service</option>
-        <option value="supervisor">Supervisor</option>
-        <option value="educator">Educator</option>
-        <option value="staff">Staff</option>
-        <option value="other">Other</option>
-      </select>
-      <fieldset id="time-worked">
-        <legend>How long have you been working with your company?</legend>
-        <input type="radio" name="time-worked" value="less-than-three-months" id="less-than-three-months">
-        <label for="less-than-three-months">Less than 3 months</label><br>
-        <input type="radio" name="time-worked" value="between-three-to-6-months" id="between-three-to-6-months">
-        <label for="between-three-to-6-months">Between 3 to 6 months</label><br>
-        <input type="radio" name="time-worked" value="between-6-months-to-one-year" id="between-6-months-to-one-year">
-        <label for="between-6-months-to-one-year">Between 6 months to 1 year</label><br>
-        <input type="radio" name="time-worked" value="between-one-to-two-years" id="between-one-to-two-years">
-        <label for="between-one-to-two-years">Between one to two years</label><br>
-        <input type="radio" name="time-worked" value="between-three-to-five-years" id="between-three-to-five-years">
-        <label for="between-three-to-five-years">Between 3 to 5 years</label><br>
-        <input type="radio" name="time-worked" value="between-five-to-ten-years" id="between-five-to-ten-years">
-        <label for="between-five-to-ten-years">Between 5 to 10 years</label><br>
-        <input type="radio" name="time-worked" value="more-than-ten-years" id="more-than-ten-years">
-        <label for="more-than-ten-years">More than 10 years</label><br>
-        <input type="radio" name="time-worked" value="dont-work" id="dont-work">
-        <label for="dont-work">Don't work</label>
-      </fieldset>
-      <fieldset id="number-of-employees">
-        <legend>How many employees does your company have?</legend>
-        <input type="radio" name="number-of-employees" value="under-ten" id="under-ten">
-        <label for="under-ten">Under 10</label><br>
-        <input type="radio" name="number-of-employees" value="ten-to-tweenty-five" id="ten-to-tweenty-five">
-        <label for="ten-to-tweenty-five">10 to 25</label><br>
-        <input type="radio" name="number-of-employees" value="tweenty-six-to-fifty" id="tweenty-six-to-fifty">
-        <label for="tweenty-six-to-fifty">26 to 50</label><br>
-        <input type="radio" name="number-of-employees" value="fifty-one-to-one-hundred" id="fifty-one-to-one-hundred">
-        <label for="fifty-one-to-one-hundred">51 to 100</label>
-      </fieldset>
-      <fieldset id="annual-revenue">
-        <legend>What's your company annual revenue?</legend>
-        <input type="radio" name="annual-revenue" value="under-ten-thousand" id="under-ten-thousand">
-        <label for="under-ten-thousand">Under $10,000</label><br>
-        <input type="radio" name="annual-revenue" value="ten-thousand-to-fifty-thousand" id="ten-thousand-to-fifty-thousand">
-        <label for="ten-thousand-to-fifty-thousand">$10,000 to $50,000</label><br>
-        <input type="radio" name="annual-revenue" value="fifty-thousand-to-one-hundred-thousand" id="fifty-thousand-to-one-hundred-thousand">
-        <label for="fifty-thousand-to-one-hundred-thousand">$50,000 to $100,000</label><br>
-        <input type="radio" name="annual-revenue" value="five-hundred-thousand-to-one-million" id="five-hundred-thousand-to-one-million">
-        <label for="five-hundred-thousand-to-one-million">$500,000 to $1 million</label><br>
-        <input type="radio" name="annual-revenue" value="one-million-to-ten-million" id="one-million-to-ten-million">
-        <label for="one-million-to-ten-million">$1 million to $10 million</label><br>
-        <input type="radio" name="annual-revenue" value="ten-million-to-fifty-million" id="ten-million-to-fifty-million">
-        <label for="ten-million-to-fifty-million">$10 million to $50 million</label><br>
-        <input type="radio" name="annual-revenue" value="fifty-million-to-one-hundred-million" id="fifty-million-to-one-hundred-million">
-        <label for="fifty-million-to-one-hundred-million">$50 million to $100 million</label><br>
-        <input type="radio" name="annual-revenue" value="over-one-hundred-million" id="over-one-hundred-million">
-        <label for="over-one-hundred-million">Over $100 million</label>
-      </fieldset>
-      <p>If you'd like to provide any additional information, leave it below.</p>
-      <textarea rows="4" cols="50"></textarea><br>
-      <input type="submit" id="submit" value="Send form"> 
+    <main id="main-container">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for your participation in our survey! Please answer the questions below so that we can learn more about you.</p>
+      <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for "email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <label for="number" id="number-label">Age</label>
+        <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age">
+        <p>What is your employment status?</p>
+        <select id="dropdown" name="employment-status">
+          <option value="full">Full Time</option>
+          <option value="part">Part Time</option>
+          <option value="contract-freelance">Contract or freelance worker</option>
+          <option value="retired">Retired</option>
+          <option value="student">Student</option>
+          <option value="homemaker">Homemaker</option>
+          <option value="not-employed-looking">Not employed but looking for work</option>
+          <option value="not-employed-not-looking">Not employed and not looking for work</option>
+          <option value="prefer-not-to-respond">Prefer not to respond</option>
+        </select>
+        <fieldset id="education-level">
+          <legend>What is your level of education?</legend>
+          <input type="radio" name="education-level" value="some-high-school" id="some-high-school">
+          <label for="some-high-school">Some high school</label><br>
+          <input type="radio" name="education-level" value="high-school-graduate" id="high-school-graduate">
+          <label for="high-school-graduate">High school graduate or equivalent</label><br>
+          <input type="radio" name="education-level" value="trade-vocational-degree" id="trade-vocational-degree">
+          <label for="trade-vocational-degree">Trade or vocational degree</label><br>
+          <input type="radio" name="education-level" value="some-college" id="some-college">
+          <label for="some-college">Some college</label><br>
+          <input type="radio" name="education-level" value="associate-degree" id="associate-degree">
+          <label for="associate-degree">Associate degree</label><br>
+          <input type="radio" name="education-level" value="bachelors-degree" id="bachelors-degree">
+          <label for="bachelors-degree">Bachelor's degree</label><br>
+          <input type="radio" name="education-level" value="graduate-professional-degree" id="graduate-professional-degree">
+          <label for="graduate-professional-degree">Graduate or professional degree</label><br>
+          <input type="radio" name="education-level" value="prefer-not-to-answer" id="prefer-not-to-answer">
+          <label for="prefer-not-to-answer">Prefer not to answer</label>
+        </fieldset>
+        <p>What nationality are you? (Check all that apply)</p>
+        <input type="checkbox" name="nationality" value="asian-pacific-islander" id="asian-pacific-islander">
+        <label for="asian-pacific-islander">Asian/Pacific Islander</label><br>
+        <input type="checkbox" name="nationality" value="black-african-american" id="black-african-american">
+        <label for="black-african-american">Black/African-American</label><br>
+        <input type="checkbox" name="nationality" value="caucasian" id="caucasian">
+        <label for="caucasian">Caucasian</label><br>
+        <input type="checkbox" name="nationality" value="hispanic" id="hispanic">
+        <label for="hispanic">Hispanic</label><br>
+        <input type="checkbox" name="nationality" value="native-american-alaska-native" id="native-american-alaska-native">
+        <label for="native-american-alaska-native">Native American/Alaska Native</label><br>
+        <input type="checkbox" name="nationality" value="other-multiracial" id="other-multiracial">
+        <label for="other-multiracial">Other/Multi-racial</label><br>
+        <input type="checkbox" name="nationality" value="decline-to-respond" id="decline-to-respond">
+        <label for="decline-to-respond">Decline to respond</label>
+        <p>What industry do you work in?</p>
+        <select id="industry" name="industry">
+          <option value="accounting">Accounting</option>
+          <option value="advertising">Advertising</option>
+          <option value="aerospace-aviation-automotive">Aerospace/Aviation/Automotive</option>
+          <option value="agriculture-forestry-fishing">Agriculture/Forestry/Fishing</option>
+          <option value="biotechnology">Biotechnology</option>
+          <option value="business-services">Business services(Hotels, Lodging places)</option>
+          <option value="computers">Computers(Hardware, Software, Internet)</option>
+          <option value="construction">Construction/Home Improvement</option>
+          <option value="consulting">Consulting</option>
+          <option value="education">Education</option>
+          <option value="engineering-architecture">Engineering/Architecture</option>
+          <option value="entertainment-recreation">Entertainment/Recreation</option>
+          <option value="finance-banking-insurance">Finance/Banking/Insurance</option>
+          <option value="food-service">Food service</option>
+          <option value="government-military">Government Military</option>
+          <option value="healthcare-medicine">Healthcare/Medical</option>
+          <option value="internet">Internet/Web 2.0</option>
+          <option value="legal">Legal</option>
+          <option value="manufacturing">Manufacturing</option>
+          <option value="marketing">Marketing/Market research/Public relations</option>
+        </select>
+        <p>Which describes your title in your current position</p>
+        <select id="position" name="position">
+          <option value="ceo-president">CEO/President</option>
+          <option value="vp">VP</option>
+          <option value="cfo">CFO</option>
+          <option value="director">Director</option>
+          <option value="manager">Manager</option>
+          <option value="technical">Technical</option>
+          <option value="small-business-owner">Small Business Owner</option>
+          <option value="clerical-administration">Clerical/Administration</option>
+          <option value="doctor-physician">Doctor/Physician</option>
+          <option value="developer-programmer">Developer/Programmer</option>
+          <option value="lawyer">Lawyer</option>
+          <option value="sales-representative">Sales Representative</option>
+          <option value="customer-service">Customer Service</option>
+          <option value="supervisor">Supervisor</option>
+          <option value="educator">Educator</option>
+          <option value="staff">Staff</option>
+          <option value="other">Other</option>
+        </select>
+        <fieldset id="time-worked">
+          <legend>How long have you been working with your company?</legend>
+          <input type="radio" name="time-worked" value="less-than-three-months" id="less-than-three-months">
+          <label for="less-than-three-months">Less than 3 months</label><br>
+          <input type="radio" name="time-worked" value="between-three-to-6-months" id="between-three-to-6-months">
+          <label for="between-three-to-6-months">Between 3 to 6 months</label><br>
+          <input type="radio" name="time-worked" value="between-6-months-to-one-year" id="between-6-months-to-one-year">
+          <label for="between-6-months-to-one-year">Between 6 months to 1 year</label><br>
+          <input type="radio" name="time-worked" value="between-one-to-two-years" id="between-one-to-two-years">
+          <label for="between-one-to-two-years">Between one to two years</label><br>
+          <input type="radio" name="time-worked" value="between-three-to-five-years" id="between-three-to-five-years">
+          <label for="between-three-to-five-years">Between 3 to 5 years</label><br>
+          <input type="radio" name="time-worked" value="between-five-to-ten-years" id="between-five-to-ten-years">
+          <label for="between-five-to-ten-years">Between 5 to 10 years</label><br>
+          <input type="radio" name="time-worked" value="more-than-ten-years" id="more-than-ten-years">
+          <label for="more-than-ten-years">More than 10 years</label><br>
+          <input type="radio" name="time-worked" value="dont-work" id="dont-work">
+          <label for="dont-work">Don't work</label>
+        </fieldset>
+        <fieldset id="number-of-employees">
+          <legend>How many employees does your company have?</legend>
+          <input type="radio" name="number-of-employees" value="under-ten" id="under-ten">
+          <label for="under-ten">Under 10</label><br>
+          <input type="radio" name="number-of-employees" value="ten-to-tweenty-five" id="ten-to-tweenty-five">
+          <label for="ten-to-tweenty-five">10 to 25</label><br>
+          <input type="radio" name="number-of-employees" value="tweenty-six-to-fifty" id="tweenty-six-to-fifty">
+          <label for="tweenty-six-to-fifty">26 to 50</label><br>
+          <input type="radio" name="number-of-employees" value="fifty-one-to-one-hundred" id="fifty-one-to-one-hundred">
+          <label for="fifty-one-to-one-hundred">51 to 100</label>
+        </fieldset>
+        <fieldset id="annual-revenue">
+          <legend>What's your company annual revenue?</legend>
+          <input type="radio" name="annual-revenue" value="under-ten-thousand" id="under-ten-thousand">
+          <label for="under-ten-thousand">Under $10,000</label><br>
+          <input type="radio" name="annual-revenue" value="ten-thousand-to-fifty-thousand" id="ten-thousand-to-fifty-thousand">
+          <label for="ten-thousand-to-fifty-thousand">$10,000 to $50,000</label><br>
+          <input type="radio" name="annual-revenue" value="fifty-thousand-to-one-hundred-thousand" id="fifty-thousand-to-one-hundred-thousand">
+          <label for="fifty-thousand-to-one-hundred-thousand">$50,000 to $100,000</label><br>
+          <input type="radio" name="annual-revenue" value="five-hundred-thousand-to-one-million" id="five-hundred-thousand-to-one-million">
+          <label for="five-hundred-thousand-to-one-million">$500,000 to $1 million</label><br>
+          <input type="radio" name="annual-revenue" value="one-million-to-ten-million" id="one-million-to-ten-million">
+          <label for="one-million-to-ten-million">$1 million to $10 million</label><br>
+          <input type="radio" name="annual-revenue" value="ten-million-to-fifty-million" id="ten-million-to-fifty-million">
+          <label for="ten-million-to-fifty-million">$10 million to $50 million</label><br>
+          <input type="radio" name="annual-revenue" value="fifty-million-to-one-hundred-million" id="fifty-million-to-one-hundred-million">
+          <label for="fifty-million-to-one-hundred-million">$50 million to $100 million</label><br>
+          <input type="radio" name="annual-revenue" value="over-one-hundred-million" id="over-one-hundred-million">
+          <label for="over-one-hundred-million">Over $100 million</label>
+        </fieldset>
+        <p>If you'd like to provide any additional information, leave it below.</p>
+        <textarea rows="4" cols="50"></textarea><br>
+        <input type="submit" id="submit" value="Send form">
     </form>
+  </main>
   </body>
 </html>
