@@ -8,6 +8,7 @@
 :root {
   --darker-bg-color: #E5E8ED;
   --lighter-bg-color: #B1B4B8;
+  --main-header-bg-color: #323A45;
 }
 
 body {
@@ -26,8 +27,24 @@ select {
   outline: none;
 }
 
+/* HEADER */
 #main-header {
   text-align: center;
+  background: var(--main-header-bg-color);
+  color: #fff;
+  align-self: stretch;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+#title,
+#description {
+  letter-spacing: 0.1em;
+}
+
+#title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 /* Center the content and display one item below the other */
@@ -50,11 +67,6 @@ legend {
   font-weight: 300;
 }
 
-#title {
-  margin: 10px 0;
-}
-
-#description,
 #survey-form p,
 legend,
 input,
