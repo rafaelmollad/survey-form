@@ -1,0 +1,68 @@
+/* BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS variables */
+:root {
+  --darker-bg-color: #E5E8ED;
+  --lighter-bg-color: #B1B4B8;
+}
+
+body {
+  background: #E5E8ED; /* fallback */
+  background: -webkit-linear-gradient(-90deg, var(--lighter-bg-color), var(--darker-bg-color));
+  background: linear-gradient(-90deg, var(--lighter-bg-color), var(--darker-bg-color));
+  font-family: 'Lato', sans-serif;
+}
+
+/* Base styles for form elements */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  outline: none;
+}
+
+#main-header {
+  text-align: center;
+}
+
+/* Center the content and display one item below the other */
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Name, Email and Age fields */
+#required {
+  display: flex;
+  flex-direction: column;
+}
+
+#title,
+#survey-form p,
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+#title {
+  margin: 10px 0;
+}
+
+#description,
+#survey-form p,
+legend,
+input,
+select,
+fieldset {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: none;
+}
