@@ -4,20 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Survey Form</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
   </head>
   <body>
     <main id="main-container">
-      <h1 id="title">Survey Form</h1>
-      <p id="description">Thank you for your participation in our survey! Please answer the questions below so that we can learn more about you.</p>
+      <header id="main-header">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Thank you for your participation in our survey! Please answer the questions below so that we can learn more about you.</p>
+      </header>
+      <!-- Form -->
       <form id="survey-form">
-        <label for="name" id="name-label">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-        <label for "email" id="email-label">Email</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email" required>
-        <label for="number" id="number-label">Age</label>
-        <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age">
+        <!-- Required fields -->
+        <div id="required">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          <label for="email" id="email-label">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          <label for="number" id="number-label">Age</label>
+          <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age">
+        </div>
+        <!-- Employment status -->
         <p>What is your employment status?</p>
         <select id="dropdown" name="employment-status">
           <option value="full">Full Time</option>
@@ -30,6 +38,7 @@
           <option value="not-employed-not-looking">Not employed and not looking for work</option>
           <option value="prefer-not-to-respond">Prefer not to respond</option>
         </select>
+        <!-- Education level -->
         <fieldset id="education-level">
           <legend>What is your level of education?</legend>
           <input type="radio" name="education-level" value="some-high-school" id="some-high-school">
@@ -49,6 +58,7 @@
           <input type="radio" name="education-level" value="prefer-not-to-answer" id="prefer-not-to-answer">
           <label for="prefer-not-to-answer">Prefer not to answer</label>
         </fieldset>
+        <!-- Nationality -->
         <p>What nationality are you? (Check all that apply)</p>
         <input type="checkbox" name="nationality" value="asian-pacific-islander" id="asian-pacific-islander">
         <label for="asian-pacific-islander">Asian/Pacific Islander</label><br>
@@ -64,6 +74,7 @@
         <label for="other-multiracial">Other/Multi-racial</label><br>
         <input type="checkbox" name="nationality" value="decline-to-respond" id="decline-to-respond">
         <label for="decline-to-respond">Decline to respond</label>
+        <!-- Type of industry -->
         <p>What industry do you work in?</p>
         <select id="industry" name="industry">
           <option value="accounting">Accounting</option>
@@ -87,6 +98,7 @@
           <option value="manufacturing">Manufacturing</option>
           <option value="marketing">Marketing/Market research/Public relations</option>
         </select>
+        <!-- Current position -->
         <p>Which describes your title in your current position</p>
         <select id="position" name="position">
           <option value="ceo-president">CEO/President</option>
@@ -107,6 +119,7 @@
           <option value="staff">Staff</option>
           <option value="other">Other</option>
         </select>
+        <!-- Time worked in the company -->
         <fieldset id="time-worked">
           <legend>How long have you been working with your company?</legend>
           <input type="radio" name="time-worked" value="less-than-three-months" id="less-than-three-months">
@@ -126,6 +139,7 @@
           <input type="radio" name="time-worked" value="dont-work" id="dont-work">
           <label for="dont-work">Don't work</label>
         </fieldset>
+        <!-- Number of employees -->
         <fieldset id="number-of-employees">
           <legend>How many employees does your company have?</legend>
           <input type="radio" name="number-of-employees" value="under-ten" id="under-ten">
@@ -137,6 +151,7 @@
           <input type="radio" name="number-of-employees" value="fifty-one-to-one-hundred" id="fifty-one-to-one-hundred">
           <label for="fifty-one-to-one-hundred">51 to 100</label>
         </fieldset>
+        <!-- Annual revenue -->
         <fieldset id="annual-revenue">
           <legend>What's your company annual revenue?</legend>
           <input type="radio" name="annual-revenue" value="under-ten-thousand" id="under-ten-thousand">
@@ -156,8 +171,10 @@
           <input type="radio" name="annual-revenue" value="over-one-hundred-million" id="over-one-hundred-million">
           <label for="over-one-hundred-million">Over $100 million</label>
         </fieldset>
+        <!-- Additonal information -->
         <p>If you'd like to provide any additional information, leave it below.</p>
         <textarea rows="4" cols="50"></textarea><br>
+        <!-- Submit button -->
         <input type="submit" id="submit" value="Send form">
     </form>
   </main>
