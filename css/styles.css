@@ -42,8 +42,10 @@ select {
   color: var(--placeholder-color);
 }
 
-select {
+select,
+textarea {
   width: 100%;
+  background: #fff;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -158,7 +160,6 @@ label {
 textarea {
   margin-bottom: 10px;
   border: none;
-  width: 100%;
   color: var(--placeholder-color);
   resize: none;
   height: 10em;
